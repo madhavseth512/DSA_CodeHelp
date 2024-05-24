@@ -46,20 +46,31 @@ int main()
         cout << endl;
     }
 
-    //non numeric (stars only) hollow full pyramid pattern -- incomplete code 
+    //non numeric (stars only) hollow full pyramid pattern
     int row_num;
     cin >> row_num;
     for (int i = 0 ; i <row_num ; i++)
     {
-        for (int j=0 ; j<row_num-i-1;j++ )
-        {
-            cout << " ";
-        }
+      if(i!=row_num-1)
+      {
+      for (int j=0 ; j<row_num-i-1;j++ )
+      {
+          cout << " ";
+      }
+      if(i>0)
         cout << "*";
-        for (int k=0;k<(2*i-1);k++)
-        {
-            
-        }
+      for (int k=0;k<(2*i-1);k++)
+      {
+          cout <<" ";
+      }
+      cout <<"*";
+      }
+      else 
+      {
+          for(int k=0;k<=i;k++)
+          cout <<"* ";
+      }
+      cout << endl;
     }
 
     //half pyramid (stars only)
