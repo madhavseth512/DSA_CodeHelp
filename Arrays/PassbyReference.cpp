@@ -26,6 +26,13 @@ int main()
 {
     int arr[2]={4,6};
     //when array is passed the size of the array is also passed to the function
+    //because when you pass an array to a function, the array itself isn't actually copied or passed. Instead, the function receives 
+    //a reference or pointer to the first element of the array. This reference tells the function where the array's data is located in memory.
+    //REASONS   
+    //1-In some language the arrays does not store the size information about the arrays data structure itself & when array is passed to 
+    //the function the function only knows about the memory location of the 1st address and not the total number of elements
+
+    //2-Knowing the size of the array prevents the funtion to iterate beyond the defined array in memory thus preventing any unexpected behaviour
     change_Array(arr,2);
 
     //printing the array here itself
