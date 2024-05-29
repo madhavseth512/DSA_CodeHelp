@@ -1,4 +1,5 @@
 #include<iostream>
+//included the header file for the use of INT_MAX & INT_MIN
 #include<limits.h>
 using namespace std;
 
@@ -8,7 +9,7 @@ int main()
 {
     int arr[]={2,4,1,6,8,9,0};
     int size=7;
-    //Best practice is to initialize our variables in INT_MAX(largest possible value an integer can store) & INT_MIN.(min value integer can store)
+    //Best practice is to initialize our variables with INT_MAX(largest possible value an integer can store) & INT_MIN (min value integer can store)
     int max_num=INT_MIN;
 
     for(int i=0;i<size;i++)
