@@ -104,7 +104,9 @@ cout<<"Address of a is : "<< &a << endll
 ```
 - In the ASCII table, the value from [-128 to -1] in signed char is mapped to [128 to 255] in case of unsigned char. We can comprehend that (128 & -128) , (129 & -127), (130 & -126) exactly matches in binary representation this they will print exact same characters in the output stream.
 <br>
+
 ## Signed v/s Unsigned Numbers
+
 **Signed numbers** can hold both positive and negative values. <br> **Unsigned numbers** can only store non-negative values (0 & +ve numbers). They utilize all the bits for numbers magnitude.<br>
 In case of signed numbers a specific bit ( usually the **Most Significant Bit** ) is designated as **Sign Bit**<br>
 Now if sign bit = 0 then the number is Positive, if sign bit = 1 then the number is Negative and here in case of signed numbers rest all other bits are used for storing magnitude of the number.<br>
@@ -242,11 +244,14 @@ switch(expression)
 - Each case clause can hold values of same data type as expression.
 - If a break; is omitted then the code will execute the next case even if its case condition dosent hold.
 <br>
+
 ### Important Points to be noted :
+
 - BREAK KEYWORD - It terminates the loop entirely once encountered.<br>
 - CONTINUE KEYWORD - This statement skips the remaining part of the current iteration of the loop and jumps directly to the beginning of next iteration. We cant use continue keyword in Switch-Case Statement.<br>
 - In do-while loop we execute the body of the loop before testing the condition.
 - COMMA OPERATOR EXAMPLES - 
+
 ```C++
 int a=5,b=6,c,d;
 c=a,b;  //Here a is stored in c because of seperator
@@ -255,6 +260,7 @@ cout<<c<<d;
 
 //The output here would be c=5 & d=6 .
 ```
+
 ```C++
 int i,j;
 j=10;
@@ -264,6 +270,7 @@ cout<<i;
 //Here the answer is 1010. j starts with the value 10. j is then incremented to 11.
 //Next j is added to 100 and then to 999 which yeilds the result as 1010.
 ```
+
 ```C++
 int a=-5;
 int k=(a++,++a);
@@ -271,10 +278,10 @@ cout<<k;
 
 //here the answer is -3
 ```
+
 - TERNARY OPERATOR -  Syntax : (Condition) ? (Expression_if_true) : (Expression_if_false)
 - Floating point numbers sometimes loose precision and can sometimes result in undesired output. This happens because decimal values do not have exact binary representation. This is a side effect of how CPU represents floating point data.
-<br>
-<br>
+
 - Some sample codes -
 ```C++
 #include<iostream>
