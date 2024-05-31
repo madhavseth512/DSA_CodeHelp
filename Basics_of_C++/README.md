@@ -3,26 +3,35 @@
 ## Algorithm 
 Algorithm is set of steps to complete a particular task. We can represent an algorithm in two ways - <br>
 **1. Flowchart** :  It is the graphical representation of Algorithm<br>
+
+Components of Flowchart are as follows : 
+
+-  Ellipse - Shows start/end of a program. It is called terminator.
+- Parallelogram - Input/Output box, used for reading or printing something.
+- Rectangle - Calculation/Process box, also used for initialization.
+- Diamond/Kite - Decision making box
+- Doubled Lined Rectangle - Represents a predefined process. A series of steps formally defined else where. 
+
 **2. Pseudocode** : It is a generic way to represent code/algo in textual formal i.e. a normal english representation of code.
 <br>
-<br>
-![Flowchart Components](https://github.com/madhavseth512/DSA_CodeHelp/blob/main/Images/Basic-flowchart-symbols-template.png)
-<br>
-<br>
-**Note -** ( % ) This is the modulus operator which gives the remainder.<br>
 ## How to write code in C++
 ```C++
-#include<iostream>
-using namespace std;
+//iostream is the header file in C++ STL that provides fundamental mechanism for performing input and output operations.
+#include<iostream> 
+
+using namespace std; //This line brings all the elements from the std into the current scope so that we can use cout and cin directly without using the std:: prefix again and again
+
+//execution starts from the main function
 int main()
 {
     cout<<"Hello World\n";
     return 0; 
 }
+
+// >> - Extraction Operator is used to read data from an input stream (like cin)
+// << - Insertion Operator is used to write data to an output stream (like cout)
 ``` 
-This is the most basic code snippet from C++ language. Explanation of its components are in the following image - <br>
-<br>
-![Explanation of Basic Syntax](https://github.com/madhavseth512/DSA_CodeHelp/blob/main/Images/image_123650291.JPG)
+This is the most basic code snippet from C++ language. 
 <br>
 <br>
 Now some of the basic implementation of C++ language is: <br>
@@ -58,12 +67,7 @@ Void reopresents the abscence of specific data type or lack of value. It suggest
 <br>
 ![Data types with their size and ranges](https://github.com/madhavseth512/DSA_CodeHelp/blob/main/Images/C-Datatypes-Range-and-Sizes.png)<br>
 <br>
-**Variable naming conventions -** Variable names are case sensitive. Spaces are not alllowed in variable names. A variable name can be any legal identifier - an unlimited length sequence of Unicode letters and digits,beginning with a letter, the dollar sign ($) or the underscore(_).
-
-## ASCII TABLE
-ASCII defines a standard way to represent letters, numbers, symbols, and even control characters using these 0s and 1s.<br>
-<br>
-![ASCII TABLE](https://github.com/madhavseth512/DSA_CodeHelp/blob/main/Images/Screenshot_2024-05-30_193120.png)<br>
+**Variable naming conventions -** Variable names are case sensitive. Spaces are not alllowed in variable names. A variable name can be any legal identifier - an unlimited length sequence of Unicode letters and digits,beginning with a letter, the dollar sign ($) or the underscore(_).<br>
 <br>
 **Important Points -** <br>
  - For Boolean data type the space allocated to it in the memory is of 1 byte. There is wastage of memory in this data type because it occupies the space of 1 bit. This is because the minimum addressable memory is of 1 byte.<br>
@@ -104,7 +108,7 @@ cout<<"Address of a is : "<< &a << endll
 In case of signed numbers a specific bit ( usually the **Most Significant Bit** ) is designated as **Sign Bit**<br>
 Now if sign bit = 0 then the number is Positive, if sign bit = 1 then the number is Negative and here in case of signed numbers rest all other bits are used for storing magnitude of the number.<br>
 <br>
-![MSB&LSB Digramatic Representation]()
+![MSB&LSB Digramatic Representation](https://github.com/madhavseth512/DSA_CodeHelp/blob/main/Images/MSB-LSB.png)
 <br>
 
 ## How negative numbers are stored in the memory ?
@@ -173,7 +177,7 @@ And when we have to read the number then we take the 2's compliment of the store
 <br>
 
 **Operators** are categorized into these types - <br>
-1. Arthematic : + - / * %
+1. Arthematic : + - / * % (Modulus operator which gives us remainder)
 2. Relational : > < >= <= != ==
 3. Assignment : =
 4. Logical    : && || !
@@ -188,6 +192,7 @@ The bitwise operators are : AND(&), OR(|), NOT(~), XOR(^)<br>
 |   1    |  1   |   0   |
 
 In case of XOR we woould get output as zero only when both of the bits are same<br>
+
 
 ## Left Shift & Right Shift Operator
 
