@@ -19,7 +19,9 @@ Components of Flowchart are as follows :
 //iostream is the header file in C++ STL that provides fundamental mechanism for performing input and output operations.
 #include<iostream> 
 
-using namespace std; //This line brings all the elements from the std into the current scope so that we can use cout and cin directly without using the std:: prefix again and again
+//This line brings all the elements from the std into the current 
+//scope so that we can use cout and cin directly without using the std:: prefix again and again
+using namespace std; 
 
 //execution starts from the main function
 int main()
@@ -69,7 +71,7 @@ Void reopresents the abscence of specific data type or lack of value. It suggest
 <br>
 **Variable naming conventions -** Variable names are case sensitive. Spaces are not alllowed in variable names. A variable name can be any legal identifier - an unlimited length sequence of Unicode letters and digits,beginning with a letter, the dollar sign ($) or the underscore(_).<br>
 <br>
-**Important Points -** <br>
+## Important Points - <br>
  - For Boolean data type the space allocated to it in the memory is of 1 byte. There is wastage of memory in this data type because it occupies the space of 1 bit. This is because the minimum addressable memory is of 1 byte.<br>
 - sizeof() operator - <br>
 ```C++
@@ -103,6 +105,8 @@ cout<<num<<endl
 int a =5;
 cout<<"Address of a is : "<< &a << endll
 ```
+- In the ASCII table, the value from [-128 to -1] in signed char is mapped to [128 to 255] in case of unsigned char. We can comprehend that (128 & -128) , (129 & -127), (130 & -126) exactly matches in binary representation this they will print exact same characters in the output stream.
+<br>
 ## Signed v/s Unsigned Numbers
 **Signed numbers** can hold both positive and negative values. <br> **Unsigned numbers** can only store non-negative values (0 & +ve numbers). They utilize all the bits for numbers magnitude.<br>
 In case of signed numbers a specific bit ( usually the **Most Significant Bit** ) is designated as **Sign Bit**<br>
@@ -194,7 +198,7 @@ The bitwise operators are : AND(&), OR(|), NOT(~), XOR(^)<br>
 In case of XOR we woould get output as zero only when both of the bits are same<br>
 
 
-## Left Shift & Right Shift Operator
+### Left Shift & Right Shift Operator
 
 LEFT SHIFT OPERATOR
 ```C++
@@ -222,7 +226,7 @@ a=a>>1;
 - For the case of negative numbers, in most programming languages, right shifting by 1 is not equivalent to simply dividing it by two becasue of how negative numbers are stored in the memory.
 - When we right shift the number by 1 then bits are shifted one position to the right. The vacated left most bit is filled with the copy of original sign bit which is 1 in this case. The final answer is then read by taking two's compliment.<br>
 
-## Switch-Case Statement
+### Switch-Case Statement
 
 ```C++
 switch(expression)
@@ -236,14 +240,78 @@ switch(expression)
         //code to execute if none of the above cases match.
 }
 ```
+
 - For expression only integer/characters are allowed. Floating point numbers are not allowed.
 - Each case clause can hold values of same data type as expression.
 - If a break; is omitted then the code will execute the next case even if its case condition dosent hold.
 <br>
+### Important Points to be noted :
+- BREAK KEYWORD - It terminates the loop entirely once encountered.<br>
+- CONTINUE KEYWORD - This statement skips the remaining part of the current iteration of the loop and jumps directly to the beginning of next iteration. We cant use continue keyword in Switch-Case Statement.<br>
+- In do-while loop we execute the body of the loop before testing the condition.
+- COMMA OPERATOR EXAMPLES - 
+```C++
+int a=5,b=6,c,d;
+c=a,b;  //Here a is stored in c because of seperator
+d=(a,b);  //b is stored in d because of the breacket
+cout<<c<<d;
 
-**BREAK KEYWORD** - It terminates the loop entirely once encountered.<br>
-**CONTINUE KEYWORD** - This statement skips the remaining part of the current iteration of the loop and jumps directly to the beginning of next iteration. We cant use continue keyword in Switch-Case Statement.<br>
+//The output here would be c=5 & d=6 .
+```
+```C++
+int i,j;
+j=10;
+i=(j++,j+100,j+999);
+cout<<i;
 
+//Here the answer is 1010. j starts with the value 10. j is then incremented to 11.
+//Next j is added to 100 and then to 999 which yeilds the result as 1010.
+```
+```C++
+int a=-5;
+int k=(a++,++a);
+cout<<k;
+
+//here the answer is -3
+```
+- TERNARY OPERATOR -  Syntax : (Condition) ? (Expression_if_true) : (Expression_if_false)
+- Floating point numbers sometimes loose precision and can sometimes result in undesired output. This happens because decimal values do not have exact binary representation. This is a side effect of how CPU represents floating point data.
+<br>
+<br>
+- Some sample codes -
+```C++
+#include<iostream>
+using namespace std;
+
+//C++ allows us to define a prototype of function where we are
+//not req to give variable names and only the default values
+int fun(int =0, int=0);
+
+int main()
+{
+    cout<<fun(5);
+    return 0;
+}
+
+//While in the function definition we can provide the variable names corres. to each parameter.
+int fun(int x,int y)
+{
+    return (x+y);
+}
+```
+```C++
+//Here in this example we have to note that the output is 6 -6 0 1. The value of c is 0 because c is 
+//not preincremented because of the concept of short circuit evaluation which states 
+//that once the overall result is determined the execution stops.
+int a=5,b=-7,c=0,d;
+d= ++a && ++b || ++c; //here  (1 || any thing ) would give 1 as output
+cout<<a<<b<<c<<d;
+```
+```C++
+int x=97;
+int y= sizeof(x++);
+cout<<x; //The output here is 97 because the operator only evaluated to determine only the data type.
+```
 ## FUNCTIONS
 ```C++
 //Basic syntax of Function
