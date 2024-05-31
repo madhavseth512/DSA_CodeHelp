@@ -2,8 +2,8 @@
 
 ## Algorithm 
 Algorithm is set of steps to complete a particular task. We can represent an algorithm in two ways - <br>
-**1. Flowchart** :  It is the graphical representation of Algorithm<br>
-
+<br>
+**1. Flowchart** :  It is the graphical representation of Algorithm
 Components of Flowchart are as follows : 
 
 -  Ellipse - Shows start/end of a program. It is called terminator.
@@ -57,8 +57,6 @@ int main()
     cin>>a;
 }
 ```
-<br>
-
 ## Data Types and Variables
 **Data type** is which type of data we are going to store. A **Variable** is a named memory location.<br>
 The categorization of data types is as follows -<br>
@@ -70,7 +68,6 @@ Void reopresents the abscence of specific data type or lack of value. It suggest
 ![Data types with their size and ranges](https://github.com/madhavseth512/DSA_CodeHelp/blob/main/Images/C-Datatypes-Range-and-Sizes.png)<br>
 <br>
 **Variable naming conventions -** Variable names are case sensitive. Spaces are not alllowed in variable names. A variable name can be any legal identifier - an unlimited length sequence of Unicode letters and digits,beginning with a letter, the dollar sign ($) or the underscore(_).<br>
-<br>
 ## Important Points - <br>
  - For Boolean data type the space allocated to it in the memory is of 1 byte. There is wastage of memory in this data type because it occupies the space of 1 bit. This is because the minimum addressable memory is of 1 byte.<br>
 - sizeof() operator - <br>
@@ -112,8 +109,8 @@ cout<<"Address of a is : "<< &a << endll
 In case of signed numbers a specific bit ( usually the **Most Significant Bit** ) is designated as **Sign Bit**<br>
 Now if sign bit = 0 then the number is Positive, if sign bit = 1 then the number is Negative and here in case of signed numbers rest all other bits are used for storing magnitude of the number.<br>
 <br>
+
 ![MSB&LSB Digramatic Representation](https://github.com/madhavseth512/DSA_CodeHelp/blob/main/Images/MSB-LSB.png)
-<br>
 
 ## How negative numbers are stored in the memory ?
 
