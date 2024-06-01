@@ -1,7 +1,10 @@
 #include<iostream>
 using namespace std;
 
-//Linear search in the array is an algorithm. It can also be used to find the number of 0's and 1's in an array that is made up of 0,1 only
+//Linear search in the array is an algorithm. It can also be used to find the number of 0's and 1's 
+//in an array that is made up of 0,1 only
+
+//Linear search in the array is an algorithm in which we iterate through each element of the array
 
 int findKey(int arr[],int size, int key)
 {
