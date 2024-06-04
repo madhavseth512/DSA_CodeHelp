@@ -14,7 +14,9 @@
 
  Array decay is a concept in C and C++ that describes the **implicit conversion of an array name to a pointer to its first element** when it's passed to a function or used in certain contexts. In simpler terms, when you pass an array to a function, the array itself isn't actually copied or passed by value. Instead, the compiler decays the array to a pointer that points to the memory location of the first element in the array.<br>
  <br>
+
  **Consequences**<br>
+
  - **Loss of Size Information:** Since the function only receives a pointer, it loses information about the original array's size (number of elements). This can be problematic if the function needs to know the array size to iterate through it or access specific elements.
  - **Passing by Reference:** Array decay essentially makes arrays behave like they are passed by reference (modifying the original array) within the function. Any changes made to the elements using the pointer inside the function will affect the original array.
 
@@ -61,7 +63,7 @@ There are two ways in which we can access the elements of the matrix/2-D array:<
 - Row-wise access : Here we print all the elements of a row and then move to another row
 - Column-wise access : Here we print all the elements of the column and then move to another column
 <br>
-<br>
+
 **Using two nested loops we can do this.**
 
 ## Passing 2D Arrays to Functions
@@ -141,4 +143,63 @@ int main()
 - **Error Scenario** - Here in the function declaration we have to note that when we are passing array like arr[ ][ ] then both of these brackets cant be empty else it will show us an error of - <br>
 "Declaration of arr as multidimensional array must have bounds for all dimensions except the first"<br>
 - The number of columns (or rows, depending on the language's memory layout) is crucial for the function to understand how many elements are present in each row and how to access them correctly.
-- For the iteration purposes in the cases like thord where we dont have enough information about number of rows then we should find another methods as done there to find that information. 
+- For the iteration purposes in the cases like thord where we dont have enough information about number of rows then we should find another methods as done there to find that information.<br>
+
+## Swap Function 
+The C++ Standard Template Library (STL) provides a generic std::swap function that can be used to swap the values of variables of any data type that supports assignment. The std::swap function is more convenient, efficient, and type-safe for built-in data types and STL containers.<br>
+```C++
+//Its inclusion is necessary in case of custom data types and 
+//non necessary for built-in data types.
+#include <algorithm>
+
+// Example usage
+int a = 5, b = 10;
+std::swap(a, b);
+// Now a is 10 and b is 5
+
+```
+## 2D Array as Vector Equivalent
+It is vector of vectors. The outer vector stores "vector < int >" type of data and inner vectors store int type of data.<br>
+
+```C++
+//declaration 
+vector < vector <int> > arr;
+
+//How to define the size of 2D Vector
+//Through this code we have declared a 2D vector of 3 rows and 4 columns.
+vector < vector <int> > arr(3, vector <int> (4));
+
+//Initializing all the elements of vector at once
+//Here all the elements of 3 row , 4 column vector is initialized with -1
+vector < vector <int> > brr(3, vector <int> (4,-1));
+
+
+
+// 3 rows and 4 columns is the size of vector thus we have 
+//created three vectors each of size 4 (i.e. containing 4 elements)
+//Not necessary here to fill all the elements for which you have allocated size.
+//we can also push this -  vector <int> a{1,2};
+vector <int> a{1,2,3,4};
+vector <int> b{4,5,6,7};
+vector <int> c{8,9,10,11}
+
+arr.push_back(a);
+arr.push_back(b);
+arr.push_back(c);
+
+
+//Printing 2D Vector
+//Here see how we have calculated the size for rows and columns 
+//Row size is arr.size() which refers to number of elements in arr named 2D vector
+//Column size is arr[0].size() which refers to the number of elements in 0th element i.e. 1st row of the 2D Vector
+for(int i=0;i<arr.size(),i++)
+{
+	//Here writing like arr[0].size would work only in the case when all the rows have equal number of elements.
+	//In another case when all rows do not have equal number of elements then we would write arr[i].size
+	for(int j=0;j<arr[0].size();j++)
+	{
+		cout<<arr[i][j];
+	}
+}
+
+```
