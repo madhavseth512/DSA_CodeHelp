@@ -50,4 +50,13 @@
   }
   ``` 
 ## Binary Search in 2D Array
+When we are applying the binary search in 2D array then we visualize it in the form of 1D array (array of arrays) 
+
+## Selection Sort
+- Selection sort is a sorting algorithm that works by repeatedly finding the minimum (or maximum) element from an unsorted list and placing it in its correct position at the beginning (or end) of the list. <br> 
+- The time complexity of selection sort is O(n^2), which means the sorting time increases quadratically with the number of elements (n) in the list.
+
+![Selection_Sort_GIF](https://github.com/madhavseth512/DSA_CodeHelp/blob/main/Images/sortingaction.gif) <br>
+<br>
+
 
