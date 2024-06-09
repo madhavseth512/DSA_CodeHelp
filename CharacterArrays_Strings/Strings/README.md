@@ -149,3 +149,33 @@ str1.compare(pos, len, str2)
 //starting at position pos2 with a length of len2 characters.
 str1.compare(pos, len, str2, pos2, len2)
 ```
+
+### Function - replace()
+```C++
+  string base="this is a test string.";
+  string str2="n example";
+  string str3="sample phrase";
+  string str4="useful.";
+
+  //Here the changes are made in the actual string
+  // Using positions:               
+  string str=base;           // "this is a test string."
+  str.replace(9,5,str2);          // "this is an example string." 
+  str.replace(19,6,str3,7,6);     // "this is an example phrase."
+  str.replace(8,10,"just a");     // "this is just a phrase."   
+  str.replace(8,6,"a shorty",7);  // "this is a short phrase."  
+  str.replace(22,1,3,'!');        // "this is a short phrase!!!" 
+  cout << str << '\n';
+```
+
+### Function - find()
+```C++
+ string sentence = "Hello cuties how are you";
+ string target = "hello"
+ cout<< sentence.find(target)<<endl;
+
+ if(sentence.find(target) == string::npos )
+ {
+  cout<<"Target not found\n";
+ }
+```
