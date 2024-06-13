@@ -203,3 +203,17 @@ for(int i=0;i<arr.size(),i++)
 }
 
 ```
+
+## Vectors are passed by value to the function
+
+**Vectors are indeed passed by value by default.** This means a copy of vector is created and passed to the function. Any changes within the function affect the copy and not the original vector.<br>
+But we can achieve pass by reference for the vectors using the following syntax change - <br>
+
+```C++
+void modifyVecotr(vector<int>& vec)
+{
+	//modify elements of the vector
+	//Changes would be done to the original vector
+}
+```
+Using & before the original vector creates a reference to the original vector.
