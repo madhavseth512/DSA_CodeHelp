@@ -23,3 +23,8 @@ There are two methods of conversion from decimal to binary:<br>
 
 - **Division by 2 :**   The remainder obtained by division with 2 would be the binary number. 
 - **Bitwise Method :** We will obtain the bits with bitwise AND operator & then right shift N by 1 & then repeat the steps till N>0. 
+<br>
+<br>
+**NOTE :** When an integer literal starts with a leading zero then it is interpreted as an octal value (base 8).<br>
+This in the case of int a = 0647; it is considered as an octal value and it represents a decimal value of 423.<br>
+
