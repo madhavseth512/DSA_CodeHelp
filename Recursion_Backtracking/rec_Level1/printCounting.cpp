@@ -4,6 +4,9 @@ using namespace std;
 //Here we have printed the counting through recursion both in the ascending and descending order. 
 //Notice how in both functions the position of recursive call and processing are swapped to get different results
 
+//Also if we were given a number of who's digits we have to print then also we should take care of the 
+//position of printing the digits(processing) and recursive calling as it would make the difference in output in that problem.
+
 void printCount(int n)
 {
     //Base condition
